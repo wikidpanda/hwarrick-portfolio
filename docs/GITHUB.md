@@ -3,21 +3,19 @@
 Account to use: [github.com/wikidpanda](https://github.com/wikidpanda).  
 Do not open a second account. The login is old; the profile is what hiring people see. A username rename to something closer to Huston Warrick is optional and can wait.
 
-Last public push on this account was February 2019. The three public repos are osu! skins and an old Tron export. Leave them up. Do not pin them.
+The osu! skin repos (`regalia`, `regaliaskins`) are removed. `tron-2-lightcycle` stays; it is not a skin. Profile name was “Regalia”; the public name is Huston Warrick.
 
-## What the resume says (July 2026)
+## What LinkedIn says
 
-Source: `C:\Users\Huston\Documents\Resumes\Warrick_Resume_2026.docx`. LinkedIn is login-walled from here, so this file is the public career record until the profile can be read while signed in.
+Source: saved profile `Downloads\Huston Warrick _ LinkedIn.html`, checked against `Resumes\Warrick_Resume_2026.docx`.
 
-- Manufacturing engineer, Power Handling, March 2025 onward in that file
-- Lead engineering technician, Power Handling, Oct 2024 – March 2025
-- Founder, Dekanova, Sep 2021 – April 2023
-- B.S. Manufacturing Technology, Eastern Washington University, 2019–2024
-- Tools called out: OnShape, SolidWorks, AutoCAD, CNC, DFMEA, Odoo, SAP, Lean
+- Field engineer, TEKsystems, Amazon Robotics, Spokane — May 2026 to present
+- Manufacturing engineer, Power Handling — March 2025 to May 2026. OEE +37%
+- Lead engineering technician, Power Handling — October 2024 to March 2025
+- Founder, Dekanova — September 2021 to September 2023
+- B.S. Manufacturing Engineering Technology, Eastern Washington University, 2019–2024
 
-The July resume still says Dekanova included mentoring a technical team and “manufacturing partners.” The portfolio does not. Suppliers stay. A co-founder does not. The next resume pass should match the site before it goes out.
-
-The site also lists TEKsystems / Amazon Robotics from May 2026. That role is not in the July resume file.
+LinkedIn still says Dekanova included managing a team. The portfolio does not. Suppliers stay. The July resume also says “manufacturing partners” and ends Dekanova in April 2023. Use the LinkedIn dates. Drop the team line on the next resume pass.
 
 ## Repos to put on the account
 
@@ -33,8 +31,6 @@ Profile bio to set:
 
 Pin `hwarrick-portfolio` and `dekanova`. Unpin nothing else; the old repos just stay off the pin row.
 
-## First commit
+## Status
 
-This repo’s only commit was “Initial commit from Create Next App.” The site, images, and case studies were never committed. The next commit is that missing history plus the redo.
-
-Push needs `gh auth login` on this machine. The GitHub CLI is not installed yet.
+Logged in as `wikidpanda`. The portfolio commit is local until the push in this pass. Profile README and the Dekanova README ship with it.
