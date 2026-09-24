@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Huston Warrick Portfolio
 
-## Getting Started
+Personal portfolio site for [hwarrick.com](https://hwarrick.com).
 
-First, run the development server:
+GitHub account: [wikidpanda](https://github.com/wikidpanda). Plan for turning that profile into current work: `docs/GITHUB.md`.
+
+## Design direction
+
+The site merges three senior-project concepts instead of picking only one:
+
+- **Home (`/`)** — dark grid hero from the About page, with pill nav (`Case Studies`, `Creative`, `Contact`)
+- **Category explorer** — arc interaction from the UX/Product/Graphic concept, remapped to `Product`, `Engineering`, and `Creative`
+- **Timeline (`/timeline`)** — Figma timeline page with purple curve and Dekanova imagery
+- **Dossier (`/dossier`)** — blueprint-style resume vault with tabs, credential roadmap, artifact index, and print/PDF export
+
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Shader Gradient (`@shadergradient/react`) — animated hero background
+- React Three Fiber + Drei — liquid logo mark and hero wireframe sculpture
+- CSS liquid-glass surfaces inspired by liquid-glass-js
+- SVG path-draw animation on the timeline curve
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding content later
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Most site content lives in `src/data/`:
 
-## Learn More
+- `site.ts` — name, title, contact info, tools
+- `case-studies/index.ts` — **full case study write-ups** (primary content source)
+- `projects.ts` — project card index (links to case studies)
+- `timeline.ts` — timeline entries + links to case studies
+- `resume.ts` — resume content used by the dossier
+- `dossier.ts` — credentials, artifacts, and contact blocks
 
-To learn more about Next.js, take a look at the following resources:
+See **`docs/PROJECTS.md`** for the GitHub repo registry and Fleet Manager workflow.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add images to `public/images/`, then reference them from case study `gallery` arrays.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying to hwarrick.com (Namecheap)
 
-## Deploy on Vercel
+1. Push this repo to GitHub.
+2. Import the repo in [Vercel](https://vercel.com) (free tier works well for portfolios).
+3. Add the custom domain `hwarrick.com` in Vercel project settings.
+4. In Namecheap DNS, point the domain to Vercel:
+   - `A` record → `76.76.21.21`
+   - `CNAME` for `www` → `cname.vercel-dns.com`
+5. Wait for DNS propagation and SSL provisioning.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Alternative: build a static export and upload to Namecheap shared hosting if you prefer not to use Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+## Source assets
+
+| Project | Location |
+|---------|----------|
+| **Dekanova** (hardware, CAD, photos) | `C:\Users\Huston\Documents\Projects\archive\dekanova` — see `PORTFOLIO-PICKS.txt` |
+| **Portfolio site** (wireframes, Figma exports) | `C:\Users\Huston\Documents\Cleanup Dec 2024\Senior Project Final` |
+
+Figma file: [Portfolio design](https://www.figma.com/design/qS8hZOZaslikddQHuBydcY/Portfolio)
