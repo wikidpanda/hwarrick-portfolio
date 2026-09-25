@@ -4,7 +4,7 @@ export const site = {
   tagline:
     "I design interfaces, build the software around them, and take hardware from CAD to a bench.",
   intro:
-    "Founder of Dekanova (moon). I work across product UI, frontend, backend, and hardware engineering — from Figma and Next.js to PCBs, enclosures, and factory samples.",
+    "Founder of Dekanova. I work across product UI, frontend, backend, and hardware engineering — from Figma and Next.js to PCBs, enclosures, and factory samples.",
   email: "hustonwarrick@gmail.com",
   phone: "+1 (425) 221-4171",
   linkedin: "https://linkedin.com/in/huston-warrick-86457a301",
@@ -64,6 +64,6 @@ export const socialLinks = [
 
 export const pillNavItems = [
   { href: "/projects", label: "Case Studies" },
-  { href: "/dossier", label: "Resume" },
+  { href: "/#work", label: "Creative" },
   { href: "/dossier#contact", label: "Contact" },
 ] as const;

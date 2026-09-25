@@ -1,87 +1,119 @@
 import { resume } from "@/data/resume";
 import { site } from "@/data/site";
 
-function FigureLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="font-ui text-[10px] uppercase tracking-[0.35em] text-accent">
-      {children}
-    </p>
-  );
-}
-
 export function BlueprintResume() {
   return (
-    <article className="blueprint-paper rounded-xl border border-white/10 p-6 md:p-10">
-      <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/10 pb-6">
-        <div>
-          <FigureLabel>Fig 1.0 — Resume Sheet</FigureLabel>
-          <h2 className="mt-3 font-display text-4xl text-cream">{site.name}</h2>
-          <p className="mt-2 font-ui text-sm text-white/80">{site.title}</p>
-        </div>
-        <div className="text-right font-ui text-sm leading-7 text-cream/80">
-          <p>{site.phone}</p>
-          <p>{site.email}</p>
-          <p>{site.domain}</p>
-        </div>
-      </div>
-
-      <section className="mt-8">
-        <FigureLabel>Fig 1.1 — Summary</FigureLabel>
-        <p className="mt-3 max-w-3xl font-serif text-base leading-8 text-white/90">
-          {resume.summary}
-        </p>
-      </section>
-
-      <section className="mt-10">
-        <FigureLabel>Fig 1.2 — Experience</FigureLabel>
-        <div className="mt-4 space-y-8">
-          {resume.experience.map((job) => (
-            <div
-              key={`${job.company}-${job.title}`}
-              className="border-l border-accent/40 pl-5"
-            >
-              <h3 className="font-display text-xl text-white">{job.title}</h3>
-              <p className="mt-1 font-ui text-sm text-cream/75">
-                {job.company} · {job.dates} · {job.location}
-              </p>
-              <ul className="mt-3 list-disc space-y-2 pl-5 font-serif text-sm leading-7 text-white/90">
-                {job.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-10 grid gap-8 md:grid-cols-2">
-        <div>
-          <FigureLabel>Fig 1.3 — Education</FigureLabel>
-          <p className="mt-3 font-serif text-base text-white">
-            {resume.education.degree}
+    <article className="resume-sheet w-full rounded-sm px-6 py-8 text-neutral-900 md:px-12 md:py-12">
+        <header className="border-b border-neutral-300 pb-5">
+          <h2 className="font-ui text-3xl font-medium tracking-tight">
+            {site.name}
+          </h2>
+          <p className="mt-2 max-w-xl font-ui text-sm leading-6 text-neutral-700">
+            {resume.headline}
           </p>
-          <p className="mt-1 font-ui text-sm text-cream/75">
-            {resume.education.school} ({resume.education.years})
+          <p className="mt-3 font-ui text-xs leading-5 text-neutral-600">
+            {site.phone} · {site.email} · {site.domain} · Spokane, WA
           </p>
-          <p className="mt-3 font-serif text-sm leading-7 text-white/85">
-            {resume.education.coursework}
-          </p>
-        </div>
+        </header>
 
-        <div>
-          <FigureLabel>Fig 1.4 — Skills Matrix</FigureLabel>
-          <div className="mt-3 space-y-4">
-            {resume.skills.map((group) => (
-              <div key={group.category}>
-                <h4 className="font-ui text-sm text-white">{group.category}</h4>
-                <p className="mt-1 font-serif text-sm leading-6 text-white/85">
-                  {group.items.join(" · ")}
+        <section className="mt-6">
+          <h3 className="font-ui text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
+            Summary
+          </h3>
+          <p className="mt-2 max-w-3xl font-ui text-sm leading-6 text-neutral-800">
+            {resume.summary}
+          </p>
+        </section>
+
+        <section className="mt-7">
+          <h3 className="font-ui text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
+            Experience
+          </h3>
+          <div className="mt-3 space-y-5">
+            {resume.experience.map((job) => (
+              <div key={`${job.company}-${job.title}`}>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h4 className="font-ui text-sm font-medium text-neutral-950">
+                    {job.title}
+                  </h4>
+                  <p className="font-ui text-xs text-neutral-500">{job.dates}</p>
+                </div>
+                <p className="font-ui text-xs text-neutral-600">
+                  {job.company} · {job.location}
                 </p>
+                <ul className="mt-2 list-disc space-y-1 pl-4 font-ui text-sm leading-6 text-neutral-800">
+                  {job.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="mt-7">
+          <h3 className="font-ui text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
+            Selected projects
+          </h3>
+          <div className="mt-3 space-y-5">
+            {resume.projects.map((project) => (
+              <div key={project.title}>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h4 className="font-ui text-sm font-medium text-neutral-950">
+                    {project.title}
+                  </h4>
+                  <p className="font-ui text-xs text-neutral-500">{project.context}</p>
+                </div>
+                <ul className="mt-2 list-disc space-y-1 pl-4 font-ui text-sm leading-6 text-neutral-800">
+                  {project.bullets.map((bullet) => (
+                    <li key={bullet}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-7">
+          <h3 className="font-ui text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
+            Education
+          </h3>
+          <div className="mt-3 space-y-3">
+            {resume.education.map((school) => (
+              <div key={school.degree}>
+                <p className="font-ui text-sm font-medium text-neutral-950">
+                  {school.degree}
+                </p>
+                <p className="font-ui text-xs text-neutral-600">
+                  {school.school} · {school.years}
+                </p>
+                {school.coursework ? (
+                  <p className="mt-1 font-ui text-xs leading-5 text-neutral-700">
+                    {school.coursework}
+                  </p>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-7">
+          <h3 className="font-ui text-[11px] font-medium uppercase tracking-[0.18em] text-neutral-500">
+            Skills
+          </h3>
+          <dl className="mt-3 grid gap-4 sm:grid-cols-2">
+            {resume.skills.map((group) => (
+              <div key={group.category}>
+                <dt className="font-ui text-xs font-medium text-neutral-950">
+                  {group.category}
+                </dt>
+                <dd className="mt-1 font-ui text-xs leading-5 text-neutral-700">
+                  {group.items.join(" · ")}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
     </article>
   );
 }

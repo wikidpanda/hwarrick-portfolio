@@ -218,18 +218,6 @@ export function CaseStudyPage({ study }: CaseStudyPageProps) {
             ) : null}
           </section>
 
-          {study.nextSteps && study.nextSteps.length > 0 ? (
-            <section>
-              <h2 className="font-ui text-xs uppercase tracking-[0.25em] text-cream/70">
-                Next steps
-              </h2>
-              <ul className="mt-3 list-disc space-y-2 pl-5 font-serif text-sm leading-7 text-white/75">
-                {study.nextSteps.map((step) => (
-                  <li key={step}>{step}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
         </div>
 
         <p className="mt-12 font-ui text-xs text-white/45">

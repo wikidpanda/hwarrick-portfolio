@@ -8,7 +8,7 @@ The Desktop Zola folder was emptied when that tree was archived on 1 Aug 2026. D
 
 ## Positioning
 
-Huston Warrick (Discord: moon). One person across four practices:
+Huston Warrick. One person across four practices:
 
 | Practice | Proof on this site |
 | --- | --- |

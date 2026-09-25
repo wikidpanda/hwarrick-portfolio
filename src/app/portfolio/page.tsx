@@ -17,17 +17,15 @@ const portfolioItems = [
     image: "/images/pcb-photo.png",
   },
   {
-    id: "pcb-layout",
-    title: "PCB Layout",
-    description:
-      "Board layout and routing work for embedded hardware development.",
+    id: "enclosure",
+    title: "Enclosure",
+    description: "Dekanova enclosure, modeled in SolidWorks.",
     image: "/images/pcb-layout.png",
   },
   {
-    id: "enclosure-wireframe",
-    title: "Enclosure Wireframe",
-    description:
-      "Early enclosure concept studies for consumer electronics housings.",
+    id: "keypad-pcb",
+    title: "Keypad PCB",
+    description: "Keypad PCB layout from the Dekanova build.",
     image: "/images/enclosure-wireframe.png",
   },
 ];

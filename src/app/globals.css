@@ -44,6 +44,14 @@ body {
   background: rgb(214 209 203 / 0.25);
 }
 
+.work-grid {
+  background-color: #e6e4e0;
+  background-image:
+    linear-gradient(rgb(40 38 40 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(40 38 40 / 0.08) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
 .grid-paper {
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -51,13 +59,10 @@ body {
   background-size: 72px 72px;
 }
 
-.blueprint-paper {
-  background-color: #1f1f21;
-  background-image:
-    linear-gradient(rgb(214 209 203 / 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(214 209 203 / 0.08) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgb(155 141 230 / 0.08), transparent 35%);
-  background-size: 48px 48px, 48px 48px, auto;
+.resume-sheet {
+  background: #f4f1ec;
+  color: #1c1c1c;
+  box-shadow: none;
 }
 
 .crop-mark {
@@ -111,6 +116,11 @@ body {
   .print-sheet {
     box-shadow: none !important;
     border: none !important;
+    background: white !important;
+  }
+
+  .resume-sheet {
+    background: white;
   }
 }
 

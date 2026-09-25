@@ -1,35 +1,40 @@
 import { site } from "@/data/site";
 
-export type DossierTab = "resume" | "credentials" | "artifacts";
+export type DossierTab = "resume" | "wip" | "artifacts";
 
-export const dossierTabs: { id: DossierTab; label: string; figure: string }[] = [
-  { id: "resume", label: "Resume", figure: "FIG 1.0" },
-  { id: "credentials", label: "Credentials", figure: "FIG 2.0" },
-  { id: "artifacts", label: "Artifacts", figure: "FIG 3.0" },
+export const dossierTabs: { id: DossierTab; label: string }[] = [
+  { id: "resume", label: "Resume" },
+  { id: "wip", label: "WIP" },
+  { id: "artifacts", label: "Index" },
 ];
 
 export const credentials = [
   {
     title: "CSWP",
     status: "Target",
-    note: "Certified SolidWorks Professional — top priority cert for design-engineer roles.",
+    note: "Not earned yet.",
   },
   {
     title: "CSWP Surfacing",
     status: "Stretch",
-    note: "Advanced surfacing specialty to reinforce the camera-body flagship work.",
+    note: "Surfacing specialty after CSWP. Not a current credential.",
   },
   {
     title: "GDTP Technologist",
     status: "Stretch",
     note: "ASME Y14.5 GD&T literacy signal that travels across tools and companies.",
   },
+  {
+    title: "LSSGB",
+    status: "In progress",
+    note: "Lean Six Sigma Green Belt. Self-paced study, not listed as earned.",
+  },
 ] as const;
 
 export const artifacts = [
   {
     title: "Timeline",
-    description: "Scroll-driven experience aligned with resume roles.",
+    description: "Roles in order, matching the resume.",
     href: "/timeline",
     tag: "Experience",
   },

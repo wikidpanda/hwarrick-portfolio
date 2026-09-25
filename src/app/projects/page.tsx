@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   const published = projects.filter((p) => p.status === "published");
-  const inProgress = projects.filter((p) => p.status !== "published");
+  const inProgress = projects.filter((p) => p.status === "in-progress");
 
   return (
     <PageShell activePath="/projects">
@@ -16,10 +16,8 @@ export default function ProjectsPage() {
           Projects
         </h2>
         <p className="mt-4 max-w-2xl font-serif text-base leading-7 text-white/80">
-          Full write-ups live locally under{" "}
-          <code className="text-cream/90">src/data/case-studies/</code>. GitHub
-          repos are tracked in the Fleet Manager portfolio registry — create
-          them as you publish each project.
+          Work that is ready to read. Camera and lamp studies sit on the WIP
+          tab of the resume until they have photos.
         </p>
       </div>
 

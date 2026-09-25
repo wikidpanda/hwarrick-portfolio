@@ -6,10 +6,7 @@ export function ArtifactsPanel() {
   return (
     <div className="space-y-10">
       <div>
-        <p className="font-ui text-[10px] uppercase tracking-[0.35em] text-accent">
-          Fig 3.0 — Artifact Index
-        </p>
-        <h2 className="mt-3 font-display text-3xl text-cream">
+        <h2 className="font-display text-3xl text-cream">
           Things worth opening
         </h2>
         <p className="mt-3 max-w-2xl font-serif text-sm leading-7 text-white/85">
@@ -39,10 +36,7 @@ export function ArtifactsPanel() {
       </div>
 
       <div id="contact" className="rounded-xl border border-accent/20 bg-accent/5 p-6">
-        <p className="font-ui text-[10px] uppercase tracking-[0.35em] text-accent">
-          Fig 3.1 — Contact Block
-        </p>
-        <h3 className="mt-3 font-display text-2xl text-cream">Get in touch</h3>
+        <h3 className="font-display text-2xl text-cream">Get in touch</h3>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
           {contactChannels.map((channel) => (
             <a

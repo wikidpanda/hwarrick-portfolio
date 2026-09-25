@@ -8,44 +8,29 @@ const galleryItems = [
     caption: "Dekanova case study",
   },
   {
-    src: "/images/portfolio-design.png",
-    alt: "Portfolio design concept",
-    caption: "Portfolio design concept",
-  },
-  {
-    src: "/images/wireframe-paper-1.jpg",
-    alt: "Paper wireframe",
-    caption: "Paper wireframe exploration",
-  },
-  {
-    src: "/images/design-process.jpg",
-    alt: "Figma design iteration",
-    caption: "Figma design iteration",
-  },
-  {
     src: "/images/mouse-wireframe.png",
     alt: "Mouse wireframe render",
-    caption: "Mouse wireframe",
+    caption: "Mouse enclosure, SolidWorks",
   },
   {
     src: "/images/enclosure-wireframe.png",
-    alt: "Enclosure wireframe render",
-    caption: "Enclosure wireframe",
+    alt: "Keypad PCB layout",
+    caption: "Keypad PCB layout",
   },
   {
     src: "/images/pcb-layout.png",
-    alt: "PCB layout screenshot",
-    caption: "PCB layout",
+    alt: "SolidWorks enclosure model",
+    caption: "Enclosure, SolidWorks",
+  },
+  {
+    src: "/images/case-study-wireframe.png",
+    alt: "Dekanova panel and volume study",
+    caption: "Panel and volume study",
   },
   {
     src: "/images/pcb-photo.png",
     alt: "PCB prototype photo",
     caption: "Prototype photo",
-  },
-  {
-    src: "/images/case-study-wireframe.png",
-    alt: "Product wireframe study",
-    caption: "Product wireframe study",
   },
 ];
 

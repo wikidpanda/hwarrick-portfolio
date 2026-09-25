@@ -19,23 +19,43 @@ function statusLabel(status: string) {
   return "Published";
 }
 
-export function CategoryExplorer() {
+export function CategoryExplorer({ paper = false }: { paper?: boolean }) {
   const [active, setActive] = useState<ProjectCategory>("product");
-  const items = projectsByCategory(active).slice(0, 3);
+  const items = projectsByCategory(active)
+    .filter((project) => project.status !== "planned")
+    .slice(0, 3);
 
+  const Shell = paper ? "section" : GlassSurface;
   return (
-    <GlassSurface className="mt-10 rounded-[28px] p-6 md:p-8">
+    <Shell
+      className={`rounded-[28px] p-6 md:p-8 ${
+        paper
+          ? "work-grid border border-neutral-300 text-neutral-900"
+          : "liquid-glass mt-10"
+      }`}
+    >
       <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
         <div>
-          <p className="font-ui text-xs uppercase tracking-[0.35em] text-cream/70">
-            Explore
+          <p
+            className={`font-ui text-xs uppercase tracking-[0.35em] ${
+              paper ? "text-neutral-500" : "text-cream/70"
+            }`}
+          >
+            Work
           </p>
-          <h2 className="mt-3 font-display text-3xl text-cream">
-            Work by focus
+          <h2
+            className={`mt-3 font-display text-3xl ${
+              paper ? "text-neutral-900" : "text-cream"
+            }`}
+          >
+            UX, product, engineering
           </h2>
-          <p className="mt-3 font-serif text-sm leading-7 text-white/80">
-            Arc navigation from the earlier UX / Product / Graphic concept,
-            remapped to the work you&apos;re building now.
+          <p
+            className={`mt-3 font-serif text-sm leading-7 ${
+              paper ? "text-neutral-700" : "text-white/80"
+            }`}
+          >
+            The arc from the senior-project comp. Pick a stop. The panels change.
           </p>
 
           <div className="relative mt-10 h-56 w-full max-w-[220px]">
@@ -43,7 +63,7 @@ export function CategoryExplorer() {
               <path
                 d={ARC_PATH}
                 fill="none"
-                stroke="rgba(186, 77, 77, 0.18)"
+                stroke={paper ? "rgba(186, 77, 77, 0.35)" : "rgba(186, 77, 77, 0.18)"}
                 strokeWidth="10"
                 strokeLinecap="round"
               />
@@ -71,8 +91,8 @@ export function CategoryExplorer() {
                     cx={cx}
                     cy={cy}
                     r={isActive ? 8 : 6}
-                    fill={isActive ? "#d6d1cb" : "transparent"}
-                    stroke="#d6d1cb"
+                    fill={isActive ? (paper ? "#1c1c1c" : "#d6d1cb") : "transparent"}
+                    stroke={paper ? "#1c1c1c" : "#d6d1cb"}
                     strokeWidth="2"
                   />
                 );
@@ -94,8 +114,12 @@ export function CategoryExplorer() {
                     onClick={() => setActive(category)}
                     className={`absolute ${positions[index]} font-display text-xl transition md:text-2xl ${
                       active === category
-                        ? "text-cream underline decoration-accent decoration-2 underline-offset-8"
-                        : "text-white/45 hover:text-white/75"
+                        ? paper
+                          ? "text-neutral-900 underline decoration-accent decoration-2 underline-offset-8"
+                          : "text-cream underline decoration-accent decoration-2 underline-offset-8"
+                        : paper
+                          ? "text-neutral-400 hover:text-neutral-700"
+                          : "text-white/45 hover:text-white/75"
                     }`}
                   >
                     {categoryLabels[category].label}
@@ -105,7 +129,11 @@ export function CategoryExplorer() {
             </div>
           </div>
 
-          <p className="mt-4 font-serif text-sm leading-6 text-white/75">
+          <p
+            className={`mt-4 font-serif text-sm leading-6 ${
+              paper ? "text-neutral-600" : "text-white/75"
+            }`}
+          >
             {categoryLabels[active].description}
           </p>
         </div>
@@ -115,7 +143,11 @@ export function CategoryExplorer() {
             <Link
               key={project.id}
               href={project.href}
-              className="glass-link group grid overflow-hidden rounded-xl liquid-glass-subtle md:grid-cols-[180px_1fr]"
+              className={`group grid overflow-hidden rounded-xl md:grid-cols-[180px_1fr] ${
+                paper
+                  ? "border border-neutral-300 bg-white"
+                  : "glass-link liquid-glass-subtle"
+              }`}
             >
               <div className="relative min-h-[140px] bg-white/5">
                 {project.image ? (
@@ -134,7 +166,13 @@ export function CategoryExplorer() {
 
               <div className="p-5">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full border border-white/10 px-2.5 py-1 font-ui text-[10px] uppercase tracking-[0.2em] text-cream/70">
+                  <span
+                    className={`rounded-full border px-2.5 py-1 font-ui text-[10px] uppercase tracking-[0.2em] ${
+                      paper
+                        ? "border-neutral-300 text-neutral-500"
+                        : "border-white/10 text-cream/70"
+                    }`}
+                  >
                     {statusLabel(project.status)}
                   </span>
                   {project.flagship ? (
@@ -143,10 +181,18 @@ export function CategoryExplorer() {
                     </span>
                   ) : null}
                 </div>
-                <h3 className="mt-3 font-display text-2xl text-white">
+                <h3
+                  className={`mt-3 font-display text-2xl ${
+                    paper ? "text-neutral-950" : "text-white"
+                  }`}
+                >
                   {project.title}
                 </h3>
-                <p className="mt-2 font-serif text-sm leading-6 text-cream/85">
+                <p
+                  className={`mt-2 font-serif text-sm leading-6 ${
+                    paper ? "text-neutral-700" : "text-cream/85"
+                  }`}
+                >
                   {project.subtitle}
                 </p>
               </div>
@@ -154,6 +200,6 @@ export function CategoryExplorer() {
           ))}
         </div>
       </div>
-    </GlassSurface>
+    </Shell>
   );
 }

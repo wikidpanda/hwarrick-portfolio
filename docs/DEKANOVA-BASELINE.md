@@ -1,6 +1,6 @@
 # Dekanova baseline
 
-Founder: Huston Warrick, Discord handle moon.  
+Founder: Huston Warrick.  
 Archive: `C:\Users\Huston\Documents\Projects\archive\dekanova`.  
 Site source inside the archive: `New Website\website` (Zola).  
 Figma: [Test Copy 3](https://www.figma.com/design/koaNVcUhSqON0cJkjIIQzq/Test-Copy-3).
@@ -31,7 +31,7 @@ Export of guild `912434689455829062`, channels visible to the account. These are
 | Metric | Raw |
 | --- | --- |
 | Messages | 3,153 |
-| Posts as moon | 426 |
+| My Discord posts | 426 |
 | Authors | 66 |
 | Images | 198 |
 | Channels with text | 8 |
@@ -42,7 +42,7 @@ Channel counts: general 2,455 · kbd-things 221 · vc-no-mic 208 · dev-chat 163
 
 Fourteen channels were requested. Six came back empty or unreadable.
 
-Optional rounded display, not the baseline: 3,625 messages, 129 authors, 222 images. Moon’s 426 posts were not rounded.
+Optional rounded display, not the baseline: 3,625 messages, 129 authors, 222 images. The 426 posts were not rounded.
 
 ## Do not publish from the archive
 

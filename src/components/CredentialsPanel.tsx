@@ -1,19 +1,41 @@
+import Link from "next/link";
 import { credentials } from "@/data/dossier";
+import { projects } from "@/data/projects";
 
 export function CredentialsPanel() {
   return (
     <div className="space-y-6">
       <div>
-        <p className="font-ui text-[10px] uppercase tracking-[0.35em] text-accent">
-          Fig 2.0 — Credential Roadmap
-        </p>
-        <h2 className="mt-3 font-display text-3xl text-cream">
-          Certifications in progress
+        <h2 className="font-display text-3xl text-cream">
+          In progress
         </h2>
         <p className="mt-3 max-w-2xl font-serif text-sm leading-7 text-white/85">
-          Pulled from your portfolio strategy doc — prioritized for design-engineer
-          hiring signal without overcommitting while flagship projects are in flight.
+          Credentials and projects that are not ready to lead the site.
         </p>
+      </div>
+
+      <div>
+        <h3 className="font-ui text-xs uppercase tracking-[0.2em] text-cream/60">
+          Projects
+        </h3>
+        <ul className="mt-3 space-y-2">
+          {projects
+            .filter((project) => project.status === "planned")
+            .map((project) => (
+              <li key={project.id}>
+                <Link
+                  href={project.href}
+                  className="font-serif text-sm text-cream underline decoration-cream/30 underline-offset-4 hover:text-white"
+                >
+                  {project.title}
+                </Link>
+                <span className="font-serif text-sm text-white/60">
+                  {" "}
+                  — {project.subtitle}
+                </span>
+              </li>
+            ))}
+        </ul>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">

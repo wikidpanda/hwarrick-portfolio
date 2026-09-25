@@ -8,7 +8,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Solo founder. Mouse, keypad, brand, Discord, and the commerce site.",
     category: "product",
     status: "in-progress",
-    period: "2021 – 2025",
+    period: "September 2021 – September 2023",
     role: "Founder · UI · Frontend · Backend · Product engineering",
     heroImage: "/images/dekanova-case-study.png",
     problem:
@@ -17,12 +17,12 @@ export const caseStudies: Record<string, CaseStudy> = {
       "Defined Axion and Muon, then ran enclosure CAD, PCB fitment, and prototype cycles through sample production.",
       "Designed the visual system in Figma and built the marketing site in Zola: landing, shop, both product pages, FAQ, and support.",
       "Started hosted checkout with Helcim and a Cloudflare Worker for the payment token handoff.",
-      "Used Discord, as moon, for betas, firmware notes, and launch posts from November 2021 through March 2025.",
+      "Used Discord for betas, firmware notes, and launch posts from November 2021 through March 2025.",
     ],
     outcomes: [
       "Two SKUs taken from concept to sample-ready hardware: Axion (PAW3399 mouse) and Muon (3-key keypad).",
       "A full UI system: wireframe brand, motion specs, and a static commerce site.",
-      "426 public posts as moon inside a 3,153-message Discord export.",
+      "A public Discord where I posted through the bring-up: 426 of my messages in a server of 3,153.",
     ],
     tools: [
       "Figma",
@@ -39,13 +39,12 @@ export const caseStudies: Record<string, CaseStudy> = {
       "C:\\Users\\Huston\\Documents\\Projects\\archive\\dekanova",
     timelineId: "dekanova",
     metrics: [
-      { value: "426", label: "Posts as moon" },
+      { value: "426", label: "My Discord posts" },
       { value: "3,153", label: "Discord messages" },
       { value: "66", label: "People who wrote" },
       { value: "198", label: "Images shared" },
     ],
-    wipNote:
-      "Baseline is written from the archive and the 1 Aug 2026 Discord export. Gallery photos from PORTFOLIO-PICKS.txt are the next pass. Counts below are raw, not rounded.",
+    wipNote: "",
     gallery: [
       {
         src: "/images/dekanova-case-study.png",
@@ -59,8 +58,8 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         src: "/images/pcb-layout.png",
-        alt: "PCB layout",
-        caption: "PCB layout and routing",
+        alt: "SolidWorks enclosure model",
+        caption: "Enclosure, modeled in SolidWorks",
       },
       {
         src: "/images/pcb-photo.png",
@@ -69,8 +68,13 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         src: "/images/enclosure-wireframe.png",
-        alt: "Enclosure wireframe",
-        caption: "Enclosure concept study",
+        alt: "Keypad PCB layout",
+        caption: "Keypad PCB layout",
+      },
+      {
+        src: "/images/case-study-wireframe.png",
+        alt: "Dekanova panel and volume study",
+        caption: "Panel and volume study",
       },
     ],
     sections: [
@@ -102,15 +106,10 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         title: "Community",
         paragraphs: [
-          "Discord was the lab notebook. The export covers 22 Nov 2021 through 11 Mar 2025, eight channels with messages, and 426 posts under the handle moon.",
+          "Discord was the lab notebook from November 2021 through March 2025. I wrote 426 messages. The server held 3,153 across eight channels.",
           "Busiest rooms: #general (2,455), #kbd-things (221), #dev-chat (163), #dev-log (38), #announcements (37).",
         ],
       },
-    ],
-    nextSteps: [
-      "Copy archive photos listed in PORTFOLIO-PICKS.txt into the gallery",
-      "Publish a redacted GitHub README for the hardware and the site",
-      "Leave NDAs, statements, and supplier contracts out of the public repo",
     ],
   },
 
@@ -151,55 +150,78 @@ export const caseStudies: Record<string, CaseStudy> = {
         alt: "About page grid layout",
         caption: "Grid-based about layout",
       },
-      {
-        src: "/images/wireframe-paper-1.jpg",
-        alt: "Paper wireframe",
-        caption: "Early paper wireframe",
-      },
-    ],
-    nextSteps: [
-      "Initialize GitHub repo (wikidpanda/hwarrick-portfolio)",
-      "Deploy to Vercel + point hwarrick.com DNS",
     ],
   },
 
   "senior-design-process": {
     id: "senior-design-process",
-    title: "Portfolio Design Process",
-    subtitle: "Wireframes, Figma iterations, and visual system for hwarrick.com.",
+    title: "hwarrick.com",
+    subtitle: "Senior project. The portfolio, designed and built to be shown.",
     category: "creative",
     status: "published",
-    period: "Senior project coursework",
-    role: "UX · Visual design",
-    heroImage: "/images/design-process.jpg",
+    period: "TECH 491 · 2024",
+    role: "Design and front-end",
+    heroImage: "/images/about-layout.png",
     problem:
-      "Define a visual language that reads as engineering-forward and professional — not generic template portfolio.",
+      "Employers were not going to read a folder of CAD. The work needed one site: case studies, a resume, and a way to move between UX, product, and engineering without looking like a template.",
     approach: [
-      "Explored light arc navigation (UX / Product / Graphic) and dark grid about layouts.",
-      "Settled on charcoal + cream typography with purple timeline curve as the anchor motif.",
-      "Mapped senior project deliverables (timeline, dossier, case studies) to navigable site sections.",
+      "Chose Namecheap and the domain hwarrick.com so the site could stay up without me running a server.",
+      "Sketched structure first, then locked the layout in Figma: a dark about page with crop marks, and a light grid with a red arc for UX, Product, and Graphic.",
+      "Coded the interface in HTML, CSS, and JavaScript. Built a separate portrait layout when the desktop grid did not survive on a phone.",
+      "Made 2D assets in Photoshop and Illustrator. Built interactive 3D in Spline and cut polygon weight so the models would load.",
+      "Checked contrast, alt text, and keyboard order against WCAG. Added Google Analytics events for resume and case-study views.",
     ],
     outcomes: [
-      "Coherent design system carried into the live Next.js build.",
-      "Documented iteration path from paper wireframes to Figma to code.",
+      "A hosted portfolio with two case studies, a resume view, and a navigation model that is now the home page of this site.",
+      "A written process: host, wireframes, assets, mobile, accessibility, analytics, and backups.",
     ],
-    tools: ["Figma", "Paper wireframing", "Typography pairing", "Design critique"],
-    repoUrl: null,
+    tools: [
+      "Figma",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Spline",
+      "Photoshop",
+      "Illustrator",
+      "Namecheap",
+    ],
+    repoUrl: "https://github.com/wikidpanda/hwarrick-portfolio",
+    sections: [
+      {
+        title: "Layout",
+        paragraphs: [
+          "The about page is a dark field. The name sits large on the left. A short bio sits on the right, inside a grid, with red crop marks. Case Studies, Creative, and Contact are pills in the corner.",
+          "The work page is a light grid. A red arc carries three stops. Each stop swaps the panels: UX for the site, Product for Dekanova, Engineering for hardware.",
+        ],
+      },
+      {
+        title: "Build",
+        paragraphs: [
+          "I managed the schedule on a Kanban board. Early milestones were navigation and the desktop grid. Later ones were the mobile layout, SEO, and accessibility.",
+          "3D models were the slow part. I reduced polygons before they went on the page, and I wrote a text alternative because a screen reader cannot read a Spline scene.",
+        ],
+      },
+    ],
     gallery: [
       {
-        src: "/images/wireframe-paper-1.jpg",
-        alt: "Paper wireframe",
-        caption: "Paper wireframe 1",
-      },
-      {
-        src: "/images/design-process.jpg",
-        alt: "Figma iteration",
-        caption: "Figma design iteration",
-      },
-      {
         src: "/images/about-layout.png",
-        alt: "About layout",
-        caption: "About page concept",
+        alt: "Dark about page with crop marks",
+        caption: "About page",
+      },
+      {
+        src: "/images/portfolio-design.png",
+        alt: "Light grid with a red arc and project panels",
+        caption: "Work page — UX, Product, Graphic",
+      },
+      {
+        src: "/images/Case Study 2.png",
+        alt: "Case study layout",
+        caption: "Case study layout",
+      },
+      {
+        src: "/images/Case Study 3.png",
+        alt: "Case study layout variant",
+        caption: "Case study layout",
       },
     ],
   },
@@ -212,34 +234,22 @@ export const caseStudies: Record<string, CaseStudy> = {
     category: "engineering",
     status: "published",
     period: "Personal project",
-    role: "Mechanical design",
-    heroImage: "/images/enclosure-wireframe.png",
+    role: "Personal project · OnShape",
     problem:
-      "Design a compact PC enclosure with separate printable/manufacturable panels, mesh intakes, and internal support geometry.",
+      "Design a compact PC enclosure with separate printable panels, mesh intakes, and internal support geometry.",
     approach: [
-      "Modeled case as an assembly of discrete STLs: front/rear panels, bottom plate, cover, feet, mesh, LED bar, power button, and GPU/PSU support.",
-      "Iterated on panel interfaces and internal clearance for SFF constraints.",
-      "Exported print-ready geometry for validation builds.",
+      "Modeled the case in OnShape as an assembly: front and rear panels, bottom plate, cover, feet, mesh, LED bar, power button, and GPU/PSU support.",
+      "Iterated on panel interfaces and internal clearance for a small-form-factor build.",
+      "Exported print-ready geometry. Photos of the printed case are not on the site yet.",
     ],
     outcomes: [
       "Complete multi-part enclosure assembly (11 components) ready for print or further DFM.",
       "Demonstrates assembly thinking, panel breaks, and SFF mechanical layout.",
     ],
-    tools: ["SolidWorks / CAD", "STL export", "3D printing", "DFM"],
+    tools: ["OnShape", "STL export", "3D printing", "DFM"],
     repoUrl: null,
     localPath: "C:\\Users\\Huston\\Documents\\- Adult engineer\\Full Case",
-    gallery: [
-      {
-        src: "/images/enclosure-wireframe.png",
-        alt: "Enclosure wireframe study",
-        caption: "Related enclosure wireframe study",
-      },
-      {
-        src: "/images/case-study-wireframe.png",
-        alt: "Product wireframe",
-        caption: "Panel and volume study",
-      },
-    ],
+    gallery: [],
     sections: [
       {
         title: "Assembly breakdown",
@@ -250,10 +260,6 @@ export const caseStudies: Record<string, CaseStudy> = {
           "LED clear bar · Power button · Rear panel · Support bar",
         ],
       },
-    ],
-    nextSteps: [
-      "Add render photos from printed build",
-      "Publish GitHub repo with README + STLs (or Onshape/SolidWorks link)",
     ],
   },
 
@@ -275,13 +281,8 @@ export const caseStudies: Record<string, CaseStudy> = {
     outcomes: [
       "In progress — case study will document surfacing iterations, mechanism layout, and DFM notes.",
     ],
-    tools: ["Plasticity", "SolidWorks", "OnShape", "GD&T"],
+    tools: ["Plasticity", "SolidWorks", "GD&T"],
     repoUrl: null,
-    nextSteps: [
-      "Complete primary surfacing pass",
-      "Define shutter/mount mechanism",
-      "Photo set + GitHub README case study",
-    ],
   },
 
   "custom-lamp": {
@@ -301,71 +302,124 @@ export const caseStudies: Record<string, CaseStudy> = {
     outcomes: ["In progress — lamp series renders and process photos coming."],
     tools: ["SolidWorks", "Plasticity", "3D printing"],
     repoUrl: null,
-    nextSteps: ["Finish 2 lamp concepts", "Print prototypes", "Publish case study"],
   },
 
   "mouse-enclosure": {
     id: "mouse-enclosure",
-    title: "Custom Mouse Enclosure",
-    subtitle: "Peripheral enclosure CAD tied to Dekanova hardware development.",
+    title: "Axion",
+    subtitle: "The Dekanova mouse. Shell, sensor, switches, and the board they sit on.",
     category: "engineering",
     status: "published",
     period: "2021 – 2023",
-    role: "CAD · DFM",
+    role: "Product design · SolidWorks",
     heroImage: "/images/mouse-wireframe.png",
     problem:
-      "Design a custom mouse housing with correct internal volumes, button geometry, and production-aware wall sections.",
+      "An enthusiast mouse at a sane price had to be light, poll at 8 kHz, and still be something I could mold and assemble by hand.",
     approach: [
-      "Wireframe and solid modeling for internal ribbing and mounting features.",
-      "Iterated against PCB envelope and ergonomics targets.",
+      "Modeled the shell in SolidWorks around a 55 g PBT target, with room for the sensor, switches, encoder, and skates.",
+      "Specified a PixArt PAW3399, binned Japanese Omron switches, a hardware debounce IC, and a Japanese ALPS encoder.",
+      "Laid the board to that stack, then brought it up on the bench before the injection-molded shells existed.",
     ],
     outcomes: [
-      "Validated enclosure geometry for prototype builds.",
-      "Part of the broader Dekanova peripheral development story.",
+      "A defined product: 55 g PBT shell, PAW3399, Omron switches, ALPS encoder, PTFE skates, custom cable, open firmware.",
+      "Shell and board matched well enough to assemble sample units.",
     ],
-    tools: ["SolidWorks", "3D printing"],
+    tools: ["SolidWorks", "PCB layout", "Injection molding", "Firmware"],
     repoUrl: null,
     timelineId: "dekanova",
+    sections: [
+      {
+        title: "Spec",
+        paragraphs: [
+          "The Axion was specified to run at 8,000 Hz. The sensor is a PixArt PAW3399. Switches are binned Japanese Omrons with a hardware IC for latched debounce, so the click is not left to a software timer.",
+        ],
+        bullets: [
+          "Shell: about 55 g, PBT, injection molded, unique outer shape",
+          "Sensor: PixArt PAW3399",
+          "Switches: binned Japanese Omron, hardware debounce",
+          "Encoder: Japanese ALPS",
+          "Skates: custom PTFE. Cable: custom. Firmware: open",
+          "Assembly: hand built and checked before it left",
+        ],
+      },
+      {
+        title: "Build",
+        paragraphs: [
+          "The shell came first as a SolidWorks model: wall thickness, button stems, and the volume the board had to live in. The board followed that envelope.",
+          "Early firmware ran on a dummy mouse with no sensor, so the rest of the stack could be proven before a PAW3399 was on the board. After that, boards were built, brought up, and fitted to printed and then molded shells.",
+        ],
+      },
+    ],
     gallery: [
       {
         src: "/images/mouse-wireframe.png",
-        alt: "Mouse wireframe",
-        caption: "Mouse enclosure wireframe",
+        alt: "Axion shell wireframe",
+        caption: "Shell study, SolidWorks",
+      },
+      {
+        src: "/images/pcb-layout.png",
+        alt: "Enclosure model",
+        caption: "Enclosure model",
+      },
+      {
+        src: "/images/pcb-photo.png",
+        alt: "Assembled prototype board",
+        caption: "Board on the bench",
       },
     ],
   },
 
   "pcb-prototype": {
     id: "pcb-prototype",
-    title: "PCB Prototype Bring-up",
-    subtitle: "Layout through assembled board validation.",
+    title: "Boards",
+    subtitle: "Axion and Muon, from layout to a board that could be tested.",
     category: "engineering",
     status: "published",
     period: "2021 – 2023",
-    role: "Hardware design",
+    role: "Hardware",
     heroImage: "/images/pcb-photo.png",
     problem:
-      "Take a peripheral PCB from schematic/layout to a physical board that could be tested on the bench.",
+      "The mouse and the keypad each needed a custom board: the sensor and switches on one, three hotswap keys and lights on the other.",
     approach: [
-      "PCB layout with attention to connector placement and DFM for assembly.",
-      "Prototype order, bring-up, and iteration on physical hardware.",
+      "Axion board: PAW3399, Omron pads, ALPS encoder, debounce IC, and a connector for the cable. Placement followed the SolidWorks shell, not the other way around.",
+      "Muon board: a 3-key PCB with RGB backlighting and underglow, MX hotswap sockets, and a path to Kailh low-profile. Firmware was ours.",
+      "Boards were ordered, soldered, and brought up on the bench. The keypad layout was checked against the acrylic stack before a full sample run.",
     ],
     outcomes: [
-      "Working prototype assemblies used in product validation.",
+      "Working mouse and keypad boards used to prove firmware, switch feel, and fit in the mechanical stack.",
     ],
-    tools: ["KiCad / PCB tools", "Soldering", "Bench testing"],
+    tools: ["PCB layout", "Soldering", "Bench testing", "Firmware"],
     repoUrl: null,
     timelineId: "dekanova",
+    sections: [
+      {
+        title: "Axion board",
+        paragraphs: [
+          "The chip people notice is the PAW3399. Around it: the switch matrix with hardware debounce, the encoder, and power for an 8 kHz device in a 55 g shell. The first live code did not include the sensor. That dummy board proved the rest of the circuit.",
+        ],
+      },
+      {
+        title: "Muon board",
+        paragraphs: [
+          "Three keys, hotswap, lights in the key and under the board, in an acrylic stack that comes apart. The PCB had to match the plate openings. Sample units were planned as a small factory run, then hand finished.",
+        ],
+      },
+    ],
     gallery: [
       {
-        src: "/images/pcb-layout.png",
-        alt: "PCB layout",
-        caption: "Board layout",
+        src: "/images/enclosure-wireframe.png",
+        alt: "Keypad PCB layout",
+        caption: "Muon keypad PCB",
       },
       {
         src: "/images/pcb-photo.png",
-        alt: "PCB photo",
-        caption: "Assembled prototype",
+        alt: "Assembled prototype board",
+        caption: "Assembled board",
+      },
+      {
+        src: "/images/case-study-wireframe.png",
+        alt: "Panel and volume study",
+        caption: "Panel and volume study",
       },
     ],
   },

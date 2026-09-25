@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { dossierTabs, type DossierTab } from "@/data/dossier";
+import { ArtifactsPanel } from "@/components/ArtifactsPanel";
 import { BlueprintResume } from "@/components/BlueprintResume";
 import { CredentialsPanel } from "@/components/CredentialsPanel";
-import { ArtifactsPanel } from "@/components/ArtifactsPanel";
 
 export function DossierView() {
   const [activeTab, setActiveTab] = useState<DossierTab>("resume");
@@ -23,9 +23,6 @@ export function DossierView() {
                 : "liquid-glass-subtle border-white/15 text-cream hover:border-cream/40"
             }`}
           >
-            <span className="mr-2 text-[10px] uppercase tracking-[0.2em] opacity-70">
-              {tab.figure}
-            </span>
             {tab.label}
           </button>
         ))}
@@ -41,7 +38,7 @@ export function DossierView() {
 
       <div className="print-sheet mt-8 rounded-[28px] liquid-glass p-6 md:p-10">
         {activeTab === "resume" ? <BlueprintResume /> : null}
-        {activeTab === "credentials" ? <CredentialsPanel /> : null}
+        {activeTab === "wip" ? <CredentialsPanel /> : null}
         {activeTab === "artifacts" ? <ArtifactsPanel /> : null}
       </div>
     </div>
